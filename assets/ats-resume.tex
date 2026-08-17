@@ -1,0 +1,73 @@
+\documentclass[10pt,a4paper]{article}
+
+% ATS-safe, single-column resume template.
+% Change a4paper to letterpaper when required by the target market.
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=0.68in]{geometry}
+\usepackage[hidelinks]{hyperref}
+
+\IfFileExists{glyphtounicode.tex}{\input{glyphtounicode}}{}
+\ifdefined\pdfgentounicode
+  \pdfgentounicode=1
+\fi
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{2pt}
+\setlength{\leftmargini}{1.2em}
+\setlength{\itemsep}{1pt}
+\setlength{\parsep}{0pt}
+\setlength{\topsep}{2pt}
+\urlstyle{same}
+
+\newcommand{\resumeSection}[1]{%
+  \vspace{8pt}%
+  {\large\bfseries #1}\par
+  \vspace{2pt}\hrule\vspace{4pt}%
+}
+
+\newcommand{\resumeRole}[4]{%
+  \textbf{#1}\hfill #2\\
+  \textit{#3}\hfill \textit{#4}\par
+}
+
+\begin{document}
+
+{\LARGE\bfseries Candidate Name}\\
+City, Country \textbar{} +00 000 000 0000 \textbar{}
+\href{mailto:name@example.com}{name@example.com} \textbar{}
+\href{https://www.linkedin.com/in/username}{linkedin.com/in/username}
+
+\resumeSection{Professional Summary}
+Write a concise three- or four-line summary that states the target, level,
+relevant domain, strongest capabilities, and evidence-backed value.
+
+\resumeSection{Core Skills}
+R\&D \textbar{} C\# \textbar{} data\_pipelines \textbar{} 25\% improvement
+
+\resumeSection{Professional Experience}
+\resumeRole{Job Title}{Month Year -- Present}{Employer}{City, Country}
+\begin{itemize}
+  \item Describe an action, its scope or context, and the verified result.
+  \item Show ownership, complexity, or scale when no measurable result exists.
+\end{itemize}
+
+\resumeRole{Earlier Job Title}{Month Year -- Month Year}{Earlier Employer}{City, Country}
+\begin{itemize}
+  \item Include only evidence relevant to the target role.
+\end{itemize}
+
+\resumeSection{Education}
+\textbf{Degree or Qualification}\hfill Graduation Year\\
+Institution, City, Country
+
+% Remove optional sections that do not strengthen the target application.
+\resumeSection{Certifications}
+Certification Name -- Issuing Organization, Year
+
+\resumeSection{Selected Projects}
+\textbf{Project Name} -- State the problem, contribution, tools, and verified result.
+
+\end{document}

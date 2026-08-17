@@ -1,0 +1,4 @@
+interface:
+  display_name: "Recruiter-Ready CV"
+  short_description: "Create or repair recruiter-ready CVs"
+  default_prompt: "Use $recruiter-ready-cv to create or improve my CV, tailor it to a target role, and produce an ATS-safe LaTeX version."
