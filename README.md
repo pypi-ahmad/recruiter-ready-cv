@@ -7,7 +7,7 @@ An agent skill for creating, repairing, and tailoring ATS-friendly CVs that also
 [![Agent Skill](https://img.shields.io/badge/Agent_Skill-SKILL.md-6f42c1?style=flat-square)](https://agentskills.io/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](LICENSE)
 
-[Repository](https://github.com/pypi-ahmad/recruiter-ready-cv) · [Skill instructions](skills/recruiter-ready-cv/SKILL.md) · [LaTeX template](skills/recruiter-ready-cv/assets/ats-resume.tex)
+[Repository](https://github.com/pypi-ahmad/recruiter-ready-cv) · [Skill instructions](skills/recruiter-ready-cv/SKILL.md) · [Interview checklist](skills/recruiter-ready-cv/references/intake-questionnaire.md) · [LaTeX template](skills/recruiter-ready-cv/assets/ats-resume.tex)
 
 </div>
 
@@ -34,6 +34,15 @@ The skill asks 3--5 related questions at a time and completes one resume section
 Each detail is tracked as verified, unknown/skipped, not applicable, or conflicting. Unknown information is disclosed rather than invented, and material conflicts must be resolved. Before drafting, the candidate receives a concise fact summary to correct or approve.
 
 For an existing resume, the skill first extracts its dates, titles, education, and major claims. It confirms that inventory, then asks only about missing evidence, weak achievements, inconsistencies, and target-role alignment. An audit-only request receives the audit first and an invitation to continue into the update workflow.
+
+If the candidate requests an early draft, the skill labels it as incomplete, keeps evidence gaps visible, and continues the interview. Without a job description, it creates a strong general version for the stated target and discloses the limits of vacancy-specific tailoring.
+
+## Inputs and privacy
+
+The skill accepts career information or an existing resume in plain text, Markdown, LaTeX, PDF, or DOCX. A job description, supplied LinkedIn content, portfolio, project list, or performance review can provide additional evidence and targeting context.
+
+> [!NOTE]
+> It does not request age, date of birth, marital status, government identifiers, a full street address, salary history, references, or a photograph unless the candidate explicitly requires a market-specific version. Live profiles are not treated as reviewed unless their content is supplied or access is authorized.
 
 ## Install
 
@@ -141,6 +150,12 @@ Tailor to a vacancy:
 Use recruiter-ready-cv to tailor my CV to this job description. Show the evidence gaps and make the strongest relevant experience easy to find.
 ```
 
+Audit before deciding whether to revise:
+
+```text
+Use recruiter-ready-cv to audit this resume only. Show the highest-impact recruiter-screening problems, then ask whether I want to continue with an update interview.
+```
+
 ## Output
 
 The default workflow returns:
@@ -152,6 +167,17 @@ The default workflow returns:
 5. Explicit evidence gaps that still need candidate input.
 6. Vacancy and LinkedIn alignment checks when source material is supplied.
 7. Generated `.tex` and `.pdf` files based on the bundled ATS-friendly template when compilation is available.
+
+## Template and files
+
+The bundled template uses a single-column, text-only layout with a centered identity block, plain ruled section headings, compact role rows, and no icons, colors, graphics, text boxes, or tables.
+
+- New files default to `<first-name>-<last-name>-resume.tex`; unknown names use `resume.tex`.
+- Existing files are never overwritten without approval. Updates use `*-revised.tex` and `*-revised.pdf` by default.
+- Paper size defaults to A4 and changes to letter paper when the target market requires it.
+- `pdflatex` is the default compiler; broader Unicode content can use `xelatex`.
+- If no compiler is available, the skill returns a syntax-reviewed `.tex` file and reports that no PDF was produced.
+- When PDF text extraction is available, the skill checks that headings, roles, dates, and bullets remain in logical ATS reading order.
 
 ## Repository structure
 
