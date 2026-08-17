@@ -21,6 +21,7 @@ An agent skill for creating, repairing, and tailoring ATS-friendly resumes that 
 - [What this skill does](#what-this-skill-does)
 - [Workflow modes](#workflow-modes)
 - [How it works](#how-it-works)
+- [Application funnel diagnosis](#application-funnel-diagnosis)
 - [Inputs and privacy](#inputs-and-privacy)
 - [Installation](#installation)
   - [Install across detected agents](#install-across-detected-agents)
@@ -42,6 +43,7 @@ This skill addresses both stages:
 - Aligns the headline, summary, skills, and experience with the target role.
 - Tailors emphasis to a vacancy instead of merely inserting keywords.
 - Checks supplied resume and LinkedIn content for positioning inconsistencies.
+- Diagnoses whether the resume is the likely bottleneck when application outcomes are supplied.
 - Produces copy-ready structured content and an ATS-safe LaTeX source.
 - Compiles a PDF when tooling is available and checks its text reading order.
 
@@ -74,6 +76,16 @@ Every resume-relevant detail is tracked using one of four states:
 Unknown information remains visible as an evidence gap rather than being guessed. Material conflicts must be resolved before the final resume is created. If the candidate requests an early draft, it is clearly labeled incomplete and the interview continues.
 
 Without a job description, the skill creates a strong general version for the stated target and explains that vacancy-specific tailoring is limited.
+
+## Application funnel diagnosis
+
+When a candidate reports repeated rejections, few interviews, or poor application conversion, the skill asks only enough questions to identify where the process is breaking. This diagnosis is conditional and does not add extra questions to an ordinary Create or Update request.
+
+| Application pattern | Skill response |
+| --- | --- |
+| Genuinely suitable applications produce few or no interviews | Investigate the resume, professional positioning, targeting, and supplied LinkedIn content. |
+| Applications consistently produce interviews but no offers | Explain that the resume is unlikely to be the primary bottleneck, avoid an automatic rewrite, and direct attention to interview or later-stage conversion. A separate resume audit remains available on request. |
+| One vacancy results in a rejection | Avoid drawing a broad conclusion. Look for repeated patterns across comparable applications and distinguish document issues from relative-fit factors such as industry, systems, or location. |
 
 ## Inputs and privacy
 
@@ -243,11 +255,17 @@ Audit before deciding whether to revise:
 Use recruiter-ready-cv to audit this resume only. Show the highest-impact recruiter-screening problems, then ask whether I want to continue with an update interview.
 ```
 
+Diagnose where the application process is breaking:
+
+```text
+Use recruiter-ready-cv to review my application outcomes, ask the conditional funnel questions, and determine whether my resume is the likely reason I am not progressing.
+```
+
 ## Deliverables
 
 The default workflow returns:
 
-1. A recruiter-screen verdict.
+1. A recruiter-screen verdict, including whether the resume appears to be the likely funnel bottleneck when application outcomes are supplied.
 2. Prioritized findings for an existing resume.
 3. A candidate-confirmed fact summary.
 4. Polished, copy-ready resume content.
