@@ -7,7 +7,7 @@ An agent skill for creating, repairing, and tailoring ATS-friendly CVs that also
 [![Agent Skill](https://img.shields.io/badge/Agent_Skill-SKILL.md-6f42c1?style=flat-square)](https://agentskills.io/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](LICENSE)
 
-[Repository](https://github.com/pypi-ahmad/recruiter-ready-cv) · [Skill instructions](SKILL.md) · [LaTeX template](assets/ats-resume.tex)
+[Repository](https://github.com/pypi-ahmad/recruiter-ready-cv) · [Skill instructions](skills/recruiter-ready-cv/SKILL.md) · [LaTeX template](skills/recruiter-ready-cv/assets/ats-resume.tex)
 
 </div>
 
@@ -31,13 +31,13 @@ An agent skill for creating, repairing, and tailoring ATS-friendly CVs that also
 Review the skill before installing it:
 
 ```shell
-gh skill preview pypi-ahmad/recruiter-ready-cv SKILL.md
+gh skill preview pypi-ahmad/recruiter-ready-cv recruiter-ready-cv
 ```
 
-GitHub CLI 2.90 or later can install the root-level skill for several supported agents. Replace `<agent>` with an ID from the table:
+GitHub CLI 2.90 or later can install the skill for several supported agents. Replace `<agent>` with an ID from the table:
 
 ```shell
-gh skill install pypi-ahmad/recruiter-ready-cv SKILL.md --agent <agent> --scope user
+gh skill install pypi-ahmad/recruiter-ready-cv recruiter-ready-cv --agent <agent> --scope user
 ```
 
 | Agent | `gh skill` ID | Native personal location | Invocation |
@@ -55,7 +55,7 @@ To install for one repository instead, run the command from that repository and 
 Install for Copilot CLI, the Copilot app, or supported IDE agent modes:
 
 ```shell
-gh skill install pypi-ahmad/recruiter-ready-cv SKILL.md --agent github-copilot --scope user
+gh skill install pypi-ahmad/recruiter-ready-cv recruiter-ready-cv --agent github-copilot --scope user
 ```
 
 Project installations are available to repository-aware Copilot surfaces, including the cloud agent and code review. See GitHub's official [agent skills documentation](https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/customize-cloud-agent/add-skills).
@@ -65,7 +65,7 @@ Project installations are available to repository-aware Copilot surfaces, includ
 Install into the Agent Skills user directory:
 
 ```shell
-gh skill install pypi-ahmad/recruiter-ready-cv SKILL.md --agent codex --scope user
+gh skill install pypi-ahmad/recruiter-ready-cv recruiter-ready-cv --agent codex --scope user
 ```
 
 Codex can invoke it as `$recruiter-ready-cv`. In the ChatGPT desktop app, open **Skills** in the sidebar and use `@` to select an available skill. If it does not appear after installation, restart the application.
@@ -78,7 +78,7 @@ Codex can invoke it as `$recruiter-ready-cv`. In the ChatGPT desktop app, open *
 For Claude Code CLI, Desktop, VS Code, or JetBrains:
 
 ```shell
-gh skill install pypi-ahmad/recruiter-ready-cv SKILL.md --agent claude-code --scope user
+gh skill install pypi-ahmad/recruiter-ready-cv recruiter-ready-cv --agent claude-code --scope user
 ```
 
 Claude Code discovers personal skills under `~/.claude/skills` and can invoke this one as `/recruiter-ready-cv`. See the official [Claude Code skills documentation](https://code.claude.com/docs/en/skills).
@@ -87,7 +87,7 @@ For Claude on the web or in the Claude app, create an upload-ready ZIP:
 
 ```shell
 git clone --depth 1 https://github.com/pypi-ahmad/recruiter-ready-cv.git recruiter-ready-cv
-git -C recruiter-ready-cv archive --format=zip --prefix=recruiter-ready-cv/ -o ../recruiter-ready-cv.zip HEAD
+git -C recruiter-ready-cv archive --format=zip --prefix=recruiter-ready-cv/ -o ../recruiter-ready-cv.zip HEAD:skills/recruiter-ready-cv
 ```
 
 Then open **Customize → Skills**, choose **Create skill → Upload a skill**, and upload `recruiter-ready-cv.zip`. Code execution and file creation must be enabled. See Anthropic's official [custom skills guide](https://support.claude.com/en/articles/12512180-use-skills-in-claude).
@@ -97,7 +97,7 @@ Then open **Customize → Skills**, choose **Create skill → Upload a skill**, 
 Install for both OpenCode CLI and UI sessions:
 
 ```shell
-gh skill install pypi-ahmad/recruiter-ready-cv SKILL.md --agent opencode --scope user
+gh skill install pypi-ahmad/recruiter-ready-cv recruiter-ready-cv --agent opencode --scope user
 ```
 
 OpenCode also discovers compatible skills from `.agents/skills` and `.claude/skills`. See the official [OpenCode skills documentation](https://opencode.ai/docs/skills/).
@@ -107,7 +107,7 @@ OpenCode also discovers compatible skills from `.agents/skills` and `.claude/ski
 Install for xAI's official Grok Build terminal agent:
 
 ```shell
-gh skill install pypi-ahmad/recruiter-ready-cv SKILL.md --agent grok --scope user
+gh skill install pypi-ahmad/recruiter-ready-cv recruiter-ready-cv --agent grok --scope user
 ```
 
 Run `/skills` to list discovered skills or `/recruiter-ready-cv` to invoke it. See the official [Grok Build skills documentation](https://github.com/xai-org/grok-build/blob/main/crates/codegen/xai-grok-shell/README.md#skills).
@@ -147,11 +147,13 @@ The default workflow returns:
 
 ```text
 recruiter-ready-cv/
-├── SKILL.md
-├── agents/
-│   └── openai.yaml
-└── assets/
-    └── ats-resume.tex
+└── skills/
+    └── recruiter-ready-cv/
+        ├── SKILL.md
+        ├── agents/
+        │   └── openai.yaml
+        └── assets/
+            └── ats-resume.tex
 ```
 
 The workflow distills recruiter-screening principles from Zara Ali's “Your CV Passed the ATS. The Recruiter Still Rejected It. Here's Why” (August 17, 2026).
