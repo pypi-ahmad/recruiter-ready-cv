@@ -281,4 +281,4 @@ recruiter-ready-cv/
             └── intake-questionnaire.md
 ```
 
-The workflow distills recruiter-screening principles from Zara Ali's “Your CV Passed the ATS. The Recruiter Still Rejected It. Here's Why” (August 17, 2026).
+The workflow distills recruiter-screening principles from Zara Ali's [“Your CV Passed the ATS. The Recruiter Still Rejected It. Here's Why”](https://www.linkedin.com/pulse/your-cv-passed-ats-recruiter-still-rejected-heres-why-zara-ali-bgsdf/) (August 17, 2026).

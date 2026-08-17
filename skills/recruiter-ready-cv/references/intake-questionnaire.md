@@ -18,6 +18,18 @@ Use this checklist as an adaptive interview, not as a form to dump on the candid
 - Employment type, travel constraints, work authorization, sponsorship needs, clearance, or licensing only when relevant to the target.
 - Preferred resume length and market-specific conventions.
 
+### Application funnel (conditional)
+
+Ask these questions only when the candidate mentions repeated rejections, few interviews, or poor conversion:
+
+- Approximately how many genuinely suitable roles have they applied for, over what period, and how closely did those roles match their experience?
+- How many applications led to recruiter screens, interviews, final rounds, or offers?
+- At which stage do applications most often end?
+- What patterns recur across job type, seniority, industry, required systems, or location?
+- Are conclusions based on one rejection or a repeated pattern across comparable applications?
+
+If the candidate regularly reaches interviews but receives no offers, record that the resume is unlikely to be the primary bottleneck. Offer a resume audit only if requested and direct attention to interview or later-stage conversion. If genuinely qualified applications rarely produce interviews, continue investigating the resume, positioning, targeting, and supplied LinkedIn content.
+
 ## 3. Identity and contact block
 
 - Preferred professional name and optional credentials or pronouns when the candidate wants them shown.

@@ -17,6 +17,15 @@ Make the candidate's target, level, value, and relevant evidence obvious within 
 
 Use the candidate's supplied material as the source of truth. Read PDF or DOCX input with the appropriate document capability. Never overwrite an original resume.
 
+## Diagnose the Application Funnel When Relevant
+
+When the candidate mentions repeated rejections, few interviews, or poor application conversion, read the conditional application-funnel questions in [references/intake-questionnaire.md](references/intake-questionnaire.md). Ask only enough to identify the likely failure stage and recurring pattern; do not make these questions mandatory for an ordinary Create or Update request.
+
+- If genuinely qualified applications produce few or no interviews, investigate the resume, positioning, targeting, and supplied LinkedIn content.
+- If applications consistently produce interviews but not offers, explain that the resume is unlikely to be the primary bottleneck. Do not automatically rewrite it; offer a separate resume audit if the candidate still wants one and identify interview or later-stage conversion as the area to examine.
+- Distinguish fixable document problems from competition or relative-fit factors. A qualified candidate may lose to someone with closer industry, systems, location, or achievement evidence.
+- Look for repeated patterns across comparable applications. Do not recommend a broad rewrite because of one rejection.
+
 ## Run the Comprehensive Interview
 
 For Create or Update, read [references/intake-questionnaire.md](references/intake-questionnaire.md) completely before interviewing.
@@ -87,12 +96,13 @@ Prefer bullets using **action + scope/context + result** when supported. Establi
 - Use accurate keywords naturally; keyword insertion alone is not tailoring.
 - Compare supplied resume and LinkedIn content for consistent dates, titles, scope, seniority, and direction.
 - Separate fixable document issues from relative-fit factors such as industry, systems, or location.
+- Preserve the resume's verified core facts and positioning across applications. Tailor emphasis for each vacancy, and recommend broader changes only when repeated outcomes or evidence reveal a pattern.
 
 ## Produce the Deliverables
 
 Unless the user requests otherwise, return:
 
-1. **Recruiter-screen verdict:** State whether target, level, value, and fit are immediately clear.
+1. **Recruiter-screen verdict:** State whether target, level, value, and fit are immediately clear. When application outcomes are supplied, state whether the resume appears to be the likely funnel bottleneck.
 2. **Priority findings:** For an existing resume, rank the few blockers most likely to weaken human screening and cite the source text.
 3. **Confirmed fact summary:** Record the facts approved before drafting.
 4. **Final structured resume:** Provide polished, copy-ready content using only verified facts.
@@ -124,9 +134,10 @@ Confirm that:
 - professional identity and target are clear within seconds;
 - achievements and contribution are visible, not only duties;
 - relevant evidence is easy to find and vacancy emphasis is accurate;
+- any supplied application outcomes are diagnosed at the correct funnel stage without overreacting to one rejection;
 - every metric, date, qualification, tool, and claim is supported;
 - structured content, LaTeX, and PDF contain the same information;
 - PDF text extracts in a logical ATS reading order; and
 - no template guidance, sample identity, or accidental overwrite remains.
 
-Source basis: Zara Ali, "Your CV Passed the ATS. The Recruiter Still Rejected It. Here's Why," August 17, 2026.
+Source basis: Zara Ali, ["Your CV Passed the ATS. The Recruiter Still Rejected It. Here's Why"](https://www.linkedin.com/pulse/your-cv-passed-ats-recruiter-still-rejected-heres-why-zara-ali-bgsdf/), August 17, 2026.
