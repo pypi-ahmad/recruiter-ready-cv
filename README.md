@@ -52,7 +52,7 @@ Review the skill before installing it:
 gh skill preview pypi-ahmad/recruiter-ready-cv recruiter-ready-cv
 ```
 
-GitHub CLI 2.90 or later can install the skill for several supported agents. Replace `<agent>` with an ID from the table:
+GitHub's `gh` tool 2.90 or later can install the skill for several supported agents. Replace `<agent>` with an ID from the table:
 
 ```shell
 gh skill install pypi-ahmad/recruiter-ready-cv recruiter-ready-cv --agent <agent> --scope user
@@ -61,7 +61,7 @@ gh skill install pypi-ahmad/recruiter-ready-cv recruiter-ready-cv --agent <agent
 | Agent | `gh skill` ID | Native personal location | Invocation |
 | --- | --- | --- | --- |
 | GitHub Copilot | `github-copilot` | `~/.copilot/skills/recruiter-ready-cv/` | Automatic or `/recruiter-ready-cv` |
-| Codex CLI | `codex` | `~/.agents/skills/recruiter-ready-cv/` | `$recruiter-ready-cv` |
+| Codex | `codex` | `~/.agents/skills/recruiter-ready-cv/` | `$recruiter-ready-cv` |
 | Claude Code | `claude-code` | `~/.claude/skills/recruiter-ready-cv/` | Automatic or `/recruiter-ready-cv` |
 | OpenCode | `opencode` | `~/.config/opencode/skills/recruiter-ready-cv/` | Automatic or `/recruiter-ready-cv` |
 | xAI Grok Build | `grok` | `~/.grok/skills/recruiter-ready-cv/` | Automatic or `/recruiter-ready-cv` |
@@ -70,7 +70,7 @@ To install for one repository instead, run the command from that repository and 
 
 ### GitHub Copilot
 
-Install for Copilot CLI, the Copilot app, or supported IDE agent modes:
+Install for Copilot, the Copilot app, or supported IDE agent modes:
 
 ```shell
 gh skill install pypi-ahmad/recruiter-ready-cv recruiter-ready-cv --agent github-copilot --scope user
@@ -78,7 +78,7 @@ gh skill install pypi-ahmad/recruiter-ready-cv recruiter-ready-cv --agent github
 
 Project installations are available to repository-aware Copilot surfaces, including the cloud agent and code review. See GitHub's official [agent skills documentation](https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/customize-cloud-agent/add-skills).
 
-### Codex CLI and ChatGPT
+### Codex and ChatGPT
 
 Install into the Agent Skills user directory:
 
@@ -91,9 +91,9 @@ Codex can invoke it as `$recruiter-ready-cv`. In the ChatGPT desktop app, open *
 > [!NOTE]
 > A raw GitHub skill is not a direct install package for ChatGPT on the web or mobile. OpenAI documents plugin packaging and publication as the distribution route for those surfaces. See the official [OpenAI skills documentation](https://developers.openai.com/codex/skills).
 
-### Claude Code and Claude UI
+### Claude Code and Claude
 
-For Claude Code CLI, Desktop, VS Code, or JetBrains:
+For Claude Code, Desktop, VS Code, or JetBrains:
 
 ```shell
 gh skill install pypi-ahmad/recruiter-ready-cv recruiter-ready-cv --agent claude-code --scope user
@@ -112,7 +112,7 @@ Then open **Customize → Skills**, choose **Create skill → Upload a skill**, 
 
 ### OpenCode
 
-Install for both OpenCode CLI and UI sessions:
+Install for OpenCode sessions:
 
 ```shell
 gh skill install pypi-ahmad/recruiter-ready-cv recruiter-ready-cv --agent opencode --scope user
@@ -120,7 +120,7 @@ gh skill install pypi-ahmad/recruiter-ready-cv recruiter-ready-cv --agent openco
 
 OpenCode also discovers compatible skills from `.agents/skills` and `.claude/skills`. See the official [OpenCode skills documentation](https://opencode.ai/docs/skills/).
 
-### xAI Grok Build CLI
+### xAI Grok Build
 
 Install for xAI's official Grok Build terminal agent:
 
