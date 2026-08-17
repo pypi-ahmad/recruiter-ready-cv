@@ -46,6 +46,40 @@ The skill accepts career information or an existing resume in plain text, Markdo
 
 ## Install
 
+### Install across detected agents
+
+The recommended installer requires Node.js 18 or later. It detects supported agents already installed on the machine and prompts for the destinations:
+
+```shell
+npx skills add https://github.com/pypi-ahmad/recruiter-ready-cv --skill recruiter-ready-cv --global
+```
+
+Install non-interactively for every detected agent:
+
+```shell
+npx skills add https://github.com/pypi-ahmad/recruiter-ready-cv --skill recruiter-ready-cv --agent '*' --global --yes
+```
+
+On Windows, use independent copies when filesystem links are unavailable:
+
+```powershell
+npx skills add https://github.com/pypi-ahmad/recruiter-ready-cv --skill recruiter-ready-cv --agent '*' --global --copy --yes
+```
+
+| Option | Effect |
+| --- | --- |
+| `--global` | Makes the skill available across projects. Omit it to install for the current project. |
+| `--agent '*'` | Targets every supported agent detected on the machine. |
+| `--yes` | Skips confirmation prompts for unattended installation. |
+| `--copy` | Copies the skill instead of creating filesystem links. |
+
+By default, the installer keeps one canonical skill and links selected agents to it. See the official [Vercel Labs Skills documentation](https://github.com/vercel-labs/skills#readme) for supported agents, locations, and update commands.
+
+> [!IMPORTANT]
+> Review third-party skills before installation. A skill can contain instructions or scripts that affect agent behavior.
+
+### Install with `gh`
+
 Review the skill before installing it:
 
 ```shell
