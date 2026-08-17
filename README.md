@@ -11,20 +11,29 @@ An agent skill for creating, repairing, and tailoring ATS-friendly CVs that also
 
 </div>
 
-`recruiter-ready-cv` helps an AI coding agent turn verified career information into a clear, vacancy-aware CV. It can interview a candidate before creating a new CV, diagnose and repair an existing one, or provide a recruiter-focused audit without rewriting.
+`recruiter-ready-cv` helps an AI coding agent turn verified career information into a clear, vacancy-aware CV. It conducts a comprehensive adaptive interview before creating a new resume, extracts and confirms facts before updating an existing one, or provides an audit before offering to continue into a revision.
 
 > [!IMPORTANT]
 > The skill must not invent employers, titles, dates, qualifications, responsibilities, metrics, or outcomes. It improves how verified evidence is presented; it cannot guarantee an interview.
 
 ## What it does
 
-- Creates a CV from scratch through a focused, interview-first intake.
+- Creates a CV from scratch through a comprehensive, completion-gated interview.
+- Extracts and confirms known facts before asking only about gaps in an existing resume.
 - Rewrites duty-based bullets as evidence-led achievements when the facts support them.
 - Aligns the headline, summary, skills, and experience with a target role.
 - Tailors emphasis to a vacancy instead of merely adding keywords.
 - Checks supplied CV and LinkedIn content for positioning inconsistencies.
-- Produces copy-ready structured content and an ATS-friendly, single-column `.tex` file.
-- Compiles with `pdflatex` when available and can adapt to `xelatex` for broader Unicode support.
+- Produces copy-ready structured content and a sanitized, single-column `.tex` file.
+- Compiles a PDF with `pdflatex` when available and verifies its ATS reading order through text extraction.
+
+## How the interview works
+
+The skill asks 3--5 related questions at a time and completes one resume section or employment role before moving to the next. It covers every applicable resume category while skipping information already supplied.
+
+Each detail is tracked as verified, unknown/skipped, not applicable, or conflicting. Unknown information is disclosed rather than invented, and material conflicts must be resolved. Before drafting, the candidate receives a concise fact summary to correct or approve.
+
+For an existing resume, the skill first extracts its dates, titles, education, and major claims. It confirms that inventory, then asks only about missing evidence, weak achievements, inconsistencies, and target-role alignment. An audit-only request receives the audit first and an invitation to continue into the update workflow.
 
 ## Install
 
@@ -117,13 +126,13 @@ Run `/skills` to list discovered skills or `/recruiter-ready-cv` to invoke it. S
 Create a new CV:
 
 ```text
-Use recruiter-ready-cv to interview me and create a CV for a senior data engineer role. Produce structured content and a LaTeX file.
+Use recruiter-ready-cv to interview me comprehensively and create a CV for a senior data engineer role. Produce structured content, a LaTeX file, and a PDF.
 ```
 
 Repair an existing CV:
 
 ```text
-Use recruiter-ready-cv to audit this CV from a recruiter's perspective, identify the highest-impact problems, and rewrite it without inventing facts.
+Use recruiter-ready-cv to extract and confirm the facts in this CV, interview me about every relevant gap, and produce a revised resume without inventing facts.
 ```
 
 Tailor to a vacancy:
@@ -138,10 +147,11 @@ The default workflow returns:
 
 1. A recruiter-screen verdict.
 2. Prioritized findings for an existing CV.
-3. Polished, copy-ready CV content.
-4. Explicit evidence gaps that still need candidate input.
-5. Vacancy and LinkedIn alignment checks when source material is supplied.
-6. A generated `.tex` file based on the bundled ATS-friendly template.
+3. A candidate-confirmed fact summary.
+4. Polished, copy-ready CV content.
+5. Explicit evidence gaps that still need candidate input.
+6. Vacancy and LinkedIn alignment checks when source material is supplied.
+7. Generated `.tex` and `.pdf` files based on the bundled ATS-friendly template when compilation is available.
 
 ## Repository structure
 
@@ -152,8 +162,10 @@ recruiter-ready-cv/
         ├── SKILL.md
         ├── agents/
         │   └── openai.yaml
-        └── assets/
-            └── ats-resume.tex
+        ├── assets/
+        │   └── ats-resume.tex
+        └── references/
+            └── intake-questionnaire.md
 ```
 
 The workflow distills recruiter-screening principles from Zara Ali's “Your CV Passed the ATS. The Recruiter Still Rejected It. Here's Why” (August 17, 2026).

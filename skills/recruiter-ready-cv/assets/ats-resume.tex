@@ -5,7 +5,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
-\usepackage[margin=0.68in]{geometry}
+\usepackage[top=0.65in,bottom=0.65in,left=0.70in,right=0.70in]{geometry}
 \usepackage[hidelinks]{hyperref}
 
 \IfFileExists{glyphtounicode.tex}{\input{glyphtounicode}}{}
@@ -14,60 +14,78 @@
 \fi
 
 \pagestyle{empty}
+\raggedbottom
+\sloppy
 \setlength{\parindent}{0pt}
-\setlength{\parskip}{2pt}
-\setlength{\leftmargini}{1.2em}
-\setlength{\itemsep}{1pt}
+\setlength{\parskip}{0pt}
+\setlength{\leftmargini}{15pt}
+\setlength{\itemsep}{1.5pt}
 \setlength{\parsep}{0pt}
-\setlength{\topsep}{2pt}
+\setlength{\topsep}{1pt}
 \urlstyle{same}
 
 \newcommand{\resumeSection}[1]{%
-  \vspace{8pt}%
-  {\large\bfseries #1}\par
-  \vspace{2pt}\hrule\vspace{4pt}%
+  \vspace{10pt}%
+  {\large\bfseries\MakeUppercase{#1}}\par
+  \vspace{1pt}\hrule\vspace{4pt}%
 }
 
-\newcommand{\resumeRole}[4]{%
-  \textbf{#1}\hfill #2\\
-  \textit{#3}\hfill \textit{#4}\par
+\newcommand{\resumeRole}[2]{%
+  \textbf{#1}\hfill #2\par\vspace{1pt}%
+}
+
+\newcommand{\resumeSubrole}[2]{%
+  \textit{#1}\hfill \textit{#2}\par\vspace{2pt}%
 }
 
 \begin{document}
 
-{\LARGE\bfseries Candidate Name}\\
-City, Country \textbar{} +00 000 000 0000 \textbar{}
-\href{mailto:name@example.com}{name@example.com} \textbar{}
-\href{https://www.linkedin.com/in/username}{linkedin.com/in/username}
+% Replace all guidance and placeholders with confirmed candidate information.
+\begin{center}
+  {\Huge\bfseries Candidate Name}\\[5pt]
+  {\large Target Professional Title}\\[6pt]
+  {\small City, Country \textbar{} +00 000 000 0000 \textbar{}
+  \href{mailto:name@example.com}{name@example.com}}\\[3pt]
+  {\small \href{https://www.linkedin.com/in/username}{linkedin.com/in/username}
+  \textbar{} \href{https://portfolio.example.com}{portfolio.example.com}}
+\end{center}
 
-\resumeSection{Professional Summary}
-Write a concise three- or four-line summary that states the target, level,
-relevant domain, strongest capabilities, and evidence-backed value.
+\vspace{4pt}
 
-\resumeSection{Core Skills}
-R\&D \textbar{} C\# \textbar{} data\_pipelines \textbar{} 25\% improvement
+\resumeSection{Summary}
+Write a concise summary stating the target, level, domain, strongest capabilities,
+and evidence-backed value. Remove this guidance from the finished resume.
 
-\resumeSection{Professional Experience}
-\resumeRole{Job Title}{Month Year -- Present}{Employer}{City, Country}
+\resumeSection{Experience}
+\resumeRole{Employer Name}{Month Year -- Present}
+\resumeSubrole{Job Title}{City, Country}
 \begin{itemize}
-  \item Describe an action, its scope or context, and the verified result.
-  \item Show ownership, complexity, or scale when no measurable result exists.
+  \item Describe a verified action, its scope or context, and its result.
+  \item Show ownership, complexity, scale, or qualitative effect when no metric exists.
 \end{itemize}
 
-\resumeRole{Earlier Job Title}{Month Year -- Month Year}{Earlier Employer}{City, Country}
+\resumeRole{Earlier Employer}{Month Year -- Month Year}
+\resumeSubrole{Earlier Job Title}{City, Country}
 \begin{itemize}
-  \item Include only evidence relevant to the target role.
+  \item Include only accurate evidence relevant to the target role.
 \end{itemize}
-
-\resumeSection{Education}
-\textbf{Degree or Qualification}\hfill Graduation Year\\
-Institution, City, Country
 
 % Remove optional sections that do not strengthen the target application.
-\resumeSection{Certifications}
-Certification Name -- Issuing Organization, Year
+\resumeSection{Projects}
+\resumeRole{Project Name}{Project Date or Link}
+\begin{itemize}
+  \item State the problem, individual contribution, tools, scale, and verified outcome.
+\end{itemize}
 
-\resumeSection{Selected Projects}
-\textbf{Project Name} -- State the problem, contribution, tools, and verified result.
+\resumeSection{Skills}
+\textbf{Priority Capability:} Verified skill, tool, domain knowledge, supporting method \\[3pt]
+\textbf{Additional Capability:} Verified skill, tool, domain knowledge
+
+\resumeSection{Education}
+\resumeRole{Degree or Qualification}{Graduation Year}
+\resumeSubrole{Institution}{City, Country}
+
+\resumeSection{Certifications}
+Certification Name -- Issuing Organization \hfill Year
 
 \end{document}

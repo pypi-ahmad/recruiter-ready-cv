@@ -1,138 +1,132 @@
 ---
 name: recruiter-ready-cv
-description: Create, audit, repair, and tailor CVs or resumes for ATS and post-ATS human recruiter screening, with structured content and an ATS-safe LaTeX deliverable. Use when starting a CV from career information, improving an existing CV in text, Markdown, LaTeX, PDF, or DOCX, diagnosing why qualified applications get few interviews, converting duties into evidence-led achievements, aligning a CV to a vacancy, or checking CV and LinkedIn positioning.
+description: Interview candidates comprehensively, then create, audit, repair, or tailor CVs and resumes for ATS and post-ATS recruiter screening with verified structured content, an ATS-safe LaTeX source, and a compiled PDF when available. Use when starting a resume from career information, improving an existing resume in text, Markdown, LaTeX, PDF, or DOCX, diagnosing why qualified applications get few interviews, converting duties into evidence-led achievements, aligning a resume to a vacancy, or checking resume and LinkedIn positioning.
 ---
 
 # Recruiter-Ready CV
 
 ## Goal
 
-Make the candidate's target, level, value, and relevant evidence obvious within a recruiter's first scan. Create or repair the CV using verified facts, then provide structured content and a clean LaTeX version that remains easy for an ATS to parse.
+Make the candidate's target, level, value, and relevant evidence obvious within a recruiter's first scan. Gather and confirm every resume-relevant fact before creating or revising the document. Never invent missing information.
 
 ## Choose the Workflow
 
-- **Create:** Use when the candidate has no usable CV or requests a new one. Run the interview-first intake before drafting.
-- **Repair:** Use when a CV already exists. Preserve its facts, diagnose recruiter-screening weaknesses, and revise only what improves clarity, evidence, positioning, or vacancy fit.
-- **Audit only:** If the user asks only for feedback, return the diagnosis without creating or changing a file.
+- **Create:** Start from career information or no usable resume. Complete the intake and confirmation gate before drafting.
+- **Update:** Read the existing resume, extract its facts, ask the candidate to correct them, then interview only for missing, ambiguous, conflicting, or weak evidence.
+- **Audit:** Diagnose the supplied resume first. After presenting the audit, ask whether the candidate wants to continue into the update interview. Do not create files unless they agree.
 
-## Gather Context
+Use the candidate's supplied material as the source of truth. Read PDF or DOCX input with the appropriate document capability. Never overwrite an original resume.
 
-Use the candidate's supplied material as the source of truth. Read an existing CV with the appropriate document capability when it is provided as PDF or DOCX, and never overwrite the original.
+## Run the Comprehensive Interview
 
-Collect or infer only when supported:
+For Create or Update, read [references/intake-questionnaire.md](references/intake-questionnaire.md) completely before interviewing.
 
-- target role, seniority, industry, location, and target market;
-- job description or representative vacancies;
-- name and user-approved contact details;
-- employment history, dates, responsibilities, achievements, tools, and scope;
-- education, certifications, projects, languages, and other relevant qualifications;
-- supplied LinkedIn content; and
-- job-search funnel signals, especially applications, interviews, and offers.
+### Maintain a fact ledger
 
-If no job description is available, create a strong general version for the stated target and disclose that vacancy-specific tailoring is limited. Treat few interviews as a possible CV, positioning, or targeting problem; treat interviews without offers as evidence that the CV may not be the main constraint.
+Track each relevant field internally with one status:
 
-## Create a New CV
+- **Verified:** explicitly supplied or confirmed by the candidate.
+- **Unknown/skipped:** the candidate cannot or chooses not to provide it.
+- **Not applicable:** the category does not apply.
+- **Conflicting:** supplied sources disagree and the candidate has not resolved them.
 
-### 1. Interview before drafting
+Do not infer a factual value merely because it is likely. Record the source of important metrics, dates, titles, qualifications, and claims when multiple documents are involved.
 
-Ask focused questions in small batches. Gather the minimum verified dataset in this order:
+### Ask adaptively
 
-1. Target role, level, market, and job description.
-2. Recent roles, employers, locations, and dates.
-3. Responsibilities, problems solved, achievements, scope, and measurable results for each relevant role.
-4. Education, certifications, skills, tools, projects, and languages.
-5. Contact details and optional sections the candidate wants included.
+- Ask 3--5 related primary questions per turn.
+- Work through one intake section at a time and one employment role at a time.
+- Skip facts already supplied; confirm extracted facts rather than asking the candidate to re-enter them.
+- Follow vague answers with targeted questions about action, problem, scale, stakeholders, tools, constraints, and outcome.
+- Offer examples of the kind of evidence needed, but never suggest a number or claim for the candidate to adopt.
+- Accept an explicit unknown, skip, or not-applicable answer and record it instead of repeatedly asking.
+- Explain why a sensitive-looking question is relevant. Do not request age, date of birth, marital status, government identifiers, a full street address, salary history, references, or a photograph unless the candidate explicitly requests a market-specific version requiring it.
 
-Do not draft the final CV until the target and core career history are clear. Skip questions already answered. Do not request unnecessary sensitive information such as a full street address, age, marital status, photograph, or government identifier.
+### Complete each workflow
 
-If the candidate cannot supply a result or metric, preserve an accurate responsibility statement or mark a clear evidence gap. Never invent a number, employer, title, date, tool, qualification, responsibility, or outcome.
+For a new resume, cover every applicable questionnaire category. For an existing resume:
 
-### 2. Build the professional story
+1. Extract a fact inventory from the source.
+2. Present a concise summary of extracted identity, target, dates, titles, education, and major claims for correction.
+3. Mark confirmed facts as Verified.
+4. Ask only about uncovered categories, conflicts, weak positioning, duty-only bullets, and missing evidence.
+
+Do not draft the final resume until:
+
+- the target role, level, market, and core career history are clear;
+- every applicable questionnaire category has a ledger status;
+- all material conflicts are resolved;
+- evidence gaps are explicitly marked unknown/skipped; and
+- the candidate confirms the final fact summary.
+
+If the candidate asks for an early draft, provide a clearly labeled working draft with visible gaps, then resume the interview. Do not represent it as final.
+
+## Build the Professional Story
 
 - Establish one coherent target across the headline, summary, skills, and recent experience.
-- Connect career changes and varied experience through relevant transferable evidence.
-- Select the strongest evidence for the target rather than treating every past duty equally.
-- Order sections by relevance. Use professional summary, core skills, experience, and education by default; add projects, certifications, languages, or other sections only when useful.
-- Keep the final length proportional to experience and target-market norms, normally one or two pages.
+- Connect career changes through verified transferable evidence.
+- Select evidence for the target rather than treating every past duty equally.
+- Order sections by relevance and keep the final length proportional to experience and target-market norms, normally one or two pages.
+- If no job description is available, create a strong general version for the stated target and disclose that vacancy-specific tailoring is limited.
 
-## Repair an Existing CV
+## Repair and Tailor
 
-### 1. Run the first-scan test
+### Run the first-scan test
 
-Determine whether a recruiter can identify within seconds:
+Determine whether a recruiter can identify within seconds who the candidate is professionally, their strongest capabilities, operating level, target, and likely value. Flag contradictions across the headline, summary, skills, recent experience, target role, and supplied LinkedIn content.
 
-- who the candidate is professionally;
-- their strongest capabilities and domain;
-- their operating level and scope;
-- the role they are targeting; and
-- the value they are likely to bring.
+### Replace duties with evidence
 
-Flag ambiguity or contradictions across the headline, summary, skills, recent experience, target role, and supplied LinkedIn content.
+Prefer bullets using **action + scope/context + result** when supported. Establish the problem, contribution, scale, and effect. When no metric or result is available, state accurate ownership, complexity, or scope without fabricating impact.
 
-### 2. Replace duties with evidence
+### Tailor through evidence
 
-Identify bullets that only describe assigned work, such as "responsible for recruitment" or "prepared monthly reports." Prefer evidence-led bullets that show:
-
-- the problem or objective;
-- the candidate's action or contribution;
-- the scale, such as team, portfolio, budget, geography, or workload; and
-- the result, improvement, or business effect.
-
-Use **action + scope/context + result** where the evidence supports it. When no result is available, make ownership and complexity clear without fabricating impact.
-
-### 3. Tailor to the vacancy
-
-- Identify the problems the employer needs solved, not just the job title.
-- Extract repeated capabilities, required experience, systems, industry context, and practical constraints.
-- Map high-priority requirements to verified candidate evidence.
+- Identify the employer's problems, repeated capabilities, required systems, industry context, and practical constraints.
+- Map high-priority requirements to verified evidence.
 - Move the strongest matching evidence earlier and reduce emphasis on less relevant material.
-- Use accurate keywords naturally. Do not treat keyword insertion alone as tailoring.
-- Preserve unrelated content unless changing it materially improves the target application.
-
-### 4. Check supporting consistency
-
-Compare supplied CV and LinkedIn content for consistent dates, titles, scope, seniority, and professional direction. They need not be identical, but they must tell the same story. Do not claim to have checked LinkedIn unless its content was provided or accessed with the user's authorization.
-
-### 5. Separate document issues from relative fit
-
-Distinguish fixable presentation problems from factors such as a closer competing candidate, direct industry experience, specific systems experience, or location requirements. Do not imply that ATS passage or meeting minimum requirements guarantees an interview.
+- Use accurate keywords naturally; keyword insertion alone is not tailoring.
+- Compare supplied resume and LinkedIn content for consistent dates, titles, scope, seniority, and direction.
+- Separate fixable document issues from relative-fit factors such as industry, systems, or location.
 
 ## Produce the Deliverables
 
-Unless the user requests another format, return:
+Unless the user requests otherwise, return:
 
-1. **Recruiter-screen verdict** - State whether the target, level, value, and fit are immediately clear.
-2. **Priority findings** - For a repaired CV, rank the few blockers most likely to weaken human screening and cite the source text.
-3. **Final structured CV** - Provide polished, copy-ready content using only verified facts.
-4. **Evidence gaps** - List unresolved scope, results, dates, or context; do not hide placeholders.
-5. **Alignment check** - Summarize vacancy coverage and verifiable CV/LinkedIn inconsistencies.
-6. **LaTeX file** - Create the ATS-safe `.tex` deliverable and report its path and compilation status.
+1. **Recruiter-screen verdict:** State whether target, level, value, and fit are immediately clear.
+2. **Priority findings:** For an existing resume, rank the few blockers most likely to weaken human screening and cite the source text.
+3. **Confirmed fact summary:** Record the facts approved before drafting.
+4. **Final structured resume:** Provide polished, copy-ready content using only verified facts.
+5. **Evidence gaps:** List unknown/skipped scope, results, dates, or context.
+6. **Alignment check:** Summarize vacancy coverage and verifiable resume/LinkedIn inconsistencies.
+7. **LaTeX and PDF:** Create the ATS-safe `.tex` file and compile a `.pdf` when tooling is available.
 
-Keep feedback candid, specific, and prioritized. Do not bury the main diagnosis in minor wording edits or claim a universal ATS score.
+Do not claim a universal ATS score or guarantee an interview.
 
-## Create the LaTeX File
+## Create the LaTeX and PDF Files
 
-1. Copy `assets/ats-resume.tex` to the user-requested output path and edit the copy, never the bundled template.
-2. If no output path is given, use the current workspace and name the file `<first-name>-<last-name>-resume.tex`; use `resume.tex` when the name is unknown.
-3. Never overwrite an existing file without explicit approval. Use a clear alternative such as `*-revised.tex` when needed.
-4. Replace all template guidance with verified candidate content and remove empty or irrelevant sections.
-5. Keep a single-column reading order. Do not add photos, icons, charts, text boxes, headers containing essential information, or complex tables.
-6. Use `a4paper` by default; change to `letterpaper` when the target market convention requires it.
-7. Escape LaTeX-sensitive characters in visible text: `\`, `#`, `$`, `%`, `&`, `_`, `{`, `}`, `~`, and `^`. Use `\url{}` or `\href{}{}` for links.
-8. Compile with `pdflatex -interaction=nonstopmode -halt-on-error` in a temporary output directory when `pdflatex` is available. Run a second pass when references or links require it. Do not silently install missing packages.
-9. If broader Unicode support is required, adapt the font preamble and compile with `xelatex`. If no compiler is available, review the syntax and clearly report that the file was not compiled.
+1. Copy `assets/ats-resume.tex` to the requested output path and edit the copy, never the bundled template.
+2. If no path is given, use the current workspace and name the source `<first-name>-<last-name>-resume.tex`; use `resume.tex` when the name is unknown.
+3. Never overwrite an existing file without explicit approval. Prefer `*-revised.tex` and `*-revised.pdf` for updates.
+4. Replace all template guidance with confirmed content and remove empty or irrelevant sections.
+5. Preserve the template's single-column reading order, plain headings, and text-only contact information. Do not add photos, icons, colors, charts, text boxes, or tables.
+6. Use `a4paper` by default; change to `letterpaper` when required by the target market.
+7. Escape LaTeX-sensitive visible characters: `\`, `#`, `$`, `%`, `&`, `_`, `{`, `}`, `~`, and `^`. Use `\url{}` or `\href{}{}` for links.
+8. Compile with `pdflatex -interaction=nonstopmode -halt-on-error` in a temporary output directory. Disable automatic package installation when the distribution supports it. Run a second pass, then copy the PDF beside the `.tex` file.
+9. Extract text from the PDF when a suitable tool is available and confirm the name, headings, roles, dates, and bullets appear in reading order.
+10. If broader Unicode support is required, adapt the font preamble and use `xelatex`. If no compiler is available, syntax-review the source and clearly report that no PDF was produced.
 
 ## Final Checklist
 
 Confirm that:
 
-- the candidate's professional identity is clear within seconds;
+- every applicable intake category is verified, unknown/skipped, or not applicable;
+- the candidate approved the fact summary and all conflicts are resolved;
+- professional identity and target are clear within seconds;
 - achievements and contribution are visible, not only duties;
-- the most relevant evidence is easy to find;
-- the CV is tailored through evidence and emphasis, not keyword stuffing;
-- supplied CV and LinkedIn information support the same positioning;
-- every fact, metric, date, and qualification is verified;
-- the structured content and LaTeX file contain the same information; and
-- the LaTeX source has no unresolved template guidance or accidental overwrites.
+- relevant evidence is easy to find and vacancy emphasis is accurate;
+- every metric, date, qualification, tool, and claim is supported;
+- structured content, LaTeX, and PDF contain the same information;
+- PDF text extracts in a logical ATS reading order; and
+- no template guidance, sample identity, or accidental overwrite remains.
 
 Source basis: Zara Ali, "Your CV Passed the ATS. The Recruiter Still Rejected It. Here's Why," August 17, 2026.
