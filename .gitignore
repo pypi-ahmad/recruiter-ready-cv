@@ -1,0 +1,3 @@
+# Local CodeGraph state and generated Better Harness reports
+.codegraph/
+.codex/better-harness/
