@@ -30,7 +30,8 @@ The repository separates diagnosis from document creation. `audit-career-positio
 - [Recruiter-ready CV inputs and privacy](#recruiter-ready-cv-inputs-and-privacy)
 - [Installation](#installation)
   - [Install audit-career-positioning](#install-audit-career-positioning)
-  - [Install across detected agents](#install-across-detected-agents)
+  - [Install recruiter-ready-cv](#install-recruiter-ready-cv)
+  - [Shared installer options](#shared-installer-options)
   - [Install with gh](#install-with-gh)
   - [Product-specific methods](#product-specific-methods)
 - [Usage examples](#usage-examples)
@@ -200,35 +201,36 @@ gh skill preview pypi-ahmad/recruiter-ready-cv audit-career-positioning
 gh skill install pypi-ahmad/recruiter-ready-cv audit-career-positioning --agent codex --scope user
 ```
 
-### Install across detected agents
+### Install recruiter-ready-cv
 
-The recommended installer requires Node.js 18 or later. It detects supported agents already installed on the machine and prompts for the destinations:
-
-In the commands below, replace `<skill-name>` with `audit-career-positioning` or `recruiter-ready-cv` before running the command.
-
-Install for the current project:
+Install for the current project with the cross-agent installer:
 
 ```shell
-npx skills add https://github.com/pypi-ahmad/recruiter-ready-cv --skill <skill-name>
+npx skills add https://github.com/pypi-ahmad/recruiter-ready-cv --skill recruiter-ready-cv
 ```
 
-Install globally across projects:
+Install globally for every detected agent:
 
 ```shell
-npx skills add https://github.com/pypi-ahmad/recruiter-ready-cv --skill <skill-name> --global
-```
-
-Install non-interactively for every detected agent:
-
-```shell
-npx skills add https://github.com/pypi-ahmad/recruiter-ready-cv --skill <skill-name> --agent '*' --global --yes
+npx skills add https://github.com/pypi-ahmad/recruiter-ready-cv --skill recruiter-ready-cv --agent '*' --global --yes
 ```
 
 On Windows, use independent copies when filesystem links are unavailable:
 
 ```powershell
-npx skills add https://github.com/pypi-ahmad/recruiter-ready-cv --skill <skill-name> --agent '*' --global --copy --yes
+npx skills add https://github.com/pypi-ahmad/recruiter-ready-cv --skill recruiter-ready-cv --agent '*' --global --copy --yes
 ```
+
+Preview and install for Codex with GitHub CLI:
+
+```shell
+gh skill preview pypi-ahmad/recruiter-ready-cv recruiter-ready-cv
+gh skill install pypi-ahmad/recruiter-ready-cv recruiter-ready-cv --agent codex --scope user
+```
+
+### Shared installer options
+
+The recommended installer requires Node.js 18 or later. It detects supported agents already installed on the machine and prompts for the destinations:
 
 | Option | Effect |
 | --- | --- |
