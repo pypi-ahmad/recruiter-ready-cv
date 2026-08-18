@@ -33,7 +33,6 @@ The repository separates diagnosis from document creation. `audit-career-positio
   - [Install recruiter-ready-cv](#install-recruiter-ready-cv)
   - [Shared installer options](#shared-installer-options)
   - [Install with gh](#install-with-gh)
-  - [Product-specific methods](#product-specific-methods)
 - [Usage examples](#usage-examples)
 - [Career positioning audit deliverables](#career-positioning-audit-deliverables)
 - [Recruiter-ready CV deliverables](#recruiter-ready-cv-deliverables)
@@ -267,70 +266,6 @@ gh skill install pypi-ahmad/recruiter-ready-cv <skill-name> --agent <agent> --sc
 | xAI Grok Build | `grok` | `~/.grok/skills/<skill-name>/` | Automatic or `/<skill-name>` |
 
 To install for one repository instead, run the command from that repository and replace `--scope user` with `--scope project`.
-
-### Product-specific methods
-
-#### GitHub Copilot
-
-Install for Copilot, the Copilot app, or supported IDE agent modes:
-
-```shell
-gh skill install pypi-ahmad/recruiter-ready-cv <skill-name> --agent github-copilot --scope user
-```
-
-Project installations are available to repository-aware Copilot surfaces, including the cloud agent and code review. See GitHub's official [agent skills documentation](https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/customize-cloud-agent/add-skills).
-
-#### Codex and ChatGPT
-
-Install into the Agent Skills user directory:
-
-```shell
-gh skill install pypi-ahmad/recruiter-ready-cv <skill-name> --agent codex --scope user
-```
-
-Codex can invoke the selected skill as `$<skill-name>`. In the ChatGPT desktop app, open **Skills** in the sidebar and use `@` to select an available skill. If it does not appear after installation, restart the application.
-
-> [!NOTE]
-> A raw GitHub skill is not a direct install package for ChatGPT on the web or mobile. OpenAI documents plugin packaging and publication as the distribution route for those surfaces. See the official [OpenAI skills documentation](https://developers.openai.com/codex/skills).
-
-#### Claude Code and Claude
-
-For Claude Code, Desktop, VS Code, or JetBrains:
-
-```shell
-gh skill install pypi-ahmad/recruiter-ready-cv <skill-name> --agent claude-code --scope user
-```
-
-Claude Code discovers personal skills under `~/.claude/skills` and can invoke the selected skill as `/<skill-name>`. See the official [Claude Code skills documentation](https://code.claude.com/docs/en/skills).
-
-For Claude on the web or in the Claude app, create an upload-ready ZIP:
-
-```shell
-git clone --depth 1 https://github.com/pypi-ahmad/recruiter-ready-cv.git recruiter-ready-cv
-git -C recruiter-ready-cv archive --format=zip --prefix=<skill-name>/ -o ../<skill-name>.zip HEAD:skills/<skill-name>
-```
-
-Then open **Customize → Skills**, choose **Create skill → Upload a skill**, and upload `<skill-name>.zip`. Code execution and file creation must be enabled. See Anthropic's official [custom skills guide](https://support.claude.com/en/articles/12512180-use-skills-in-claude).
-
-#### OpenCode
-
-Install for OpenCode sessions:
-
-```shell
-gh skill install pypi-ahmad/recruiter-ready-cv <skill-name> --agent opencode --scope user
-```
-
-OpenCode also discovers compatible skills from `.agents/skills` and `.claude/skills`. See the official [OpenCode skills documentation](https://opencode.ai/docs/skills/).
-
-#### xAI Grok Build
-
-Install for xAI's official Grok Build terminal agent:
-
-```shell
-gh skill install pypi-ahmad/recruiter-ready-cv <skill-name> --agent grok --scope user
-```
-
-Run `/skills` to list discovered skills or `/<skill-name>` to invoke the selected one. See the official [Grok Build skills documentation](https://github.com/xai-org/grok-build/blob/main/crates/codegen/xai-grok-shell/README.md#skills).
 
 ## Usage examples
 
