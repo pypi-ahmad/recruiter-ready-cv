@@ -1,6 +1,7 @@
 ---
 name: recruiter-ready-cv
 description: Interview candidates comprehensively, then create, audit, repair, or tailor CVs and resumes for ATS and post-ATS recruiter screening with verified structured content, an ATS-safe LaTeX source, and a compiled PDF when available. Use when starting a resume from career information, improving an existing resume in text, Markdown, LaTeX, PDF, or DOCX, diagnosing why qualified applications get few interviews, converting duties into evidence-led achievements, aligning a resume to a vacancy, or checking resume and LinkedIn positioning.
+license: MIT
 ---
 
 # Recruiter-Ready CV
@@ -100,7 +101,7 @@ Prefer bullets using **action + scope/context + result** when supported. Establi
 
 ## Produce the Deliverables
 
-Unless the user requests otherwise, return:
+For Create and Update, unless the user requests otherwise, return:
 
 1. **Recruiter-screen verdict:** State whether target, level, value, and fit are immediately clear. When application outcomes are supplied, state whether the resume appears to be the likely funnel bottleneck.
 2. **Priority findings:** For an existing resume, rank the few blockers most likely to weaken human screening and cite the source text.
@@ -109,6 +110,8 @@ Unless the user requests otherwise, return:
 5. **Evidence gaps:** List unknown/skipped scope, results, dates, or context.
 6. **Alignment check:** Summarize vacancy coverage and verifiable resume/LinkedIn inconsistencies.
 7. **LaTeX and PDF:** Create the ATS-safe `.tex` file and compile a `.pdf` when tooling is available.
+
+For Audit, return only the recruiter-screen verdict, priority findings, evidence gaps, and applicable alignment checks. Do not create a final structured resume, LaTeX source, or PDF unless the candidate explicitly agrees to continue into Update.
 
 Do not claim a universal ATS score or guarantee an interview.
 

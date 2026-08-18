@@ -1,0 +1,4 @@
+interface:
+  display_name: "Career Positioning Audit"
+  short_description: "Audit career clarity and shortlist evidence"
+  default_prompt: "Use $audit-career-positioning to test whether my CV and LinkedIn clearly communicate my target role and strongest evidence."
