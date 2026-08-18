@@ -22,6 +22,8 @@ Use the candidate's supplied material as the source of truth. Read PDF or DOCX i
 
 When the candidate mentions repeated rejections, few interviews, or poor application conversion, read the conditional application-funnel questions in [references/intake-questionnaire.md](references/intake-questionnaire.md). Ask only enough to identify the likely failure stage and recurring pattern; do not make these questions mandatory for an ordinary Create or Update request.
 
+If the user wants diagnosis before document creation or revision, route the broader pre-interview visibility audit to `$audit-job-search-visibility`. Continue here when the user requests a resume audit, creation, update, or approved rewrite.
+
 - If genuinely qualified applications produce few or no interviews, investigate the resume, positioning, targeting, and supplied LinkedIn content.
 - If applications consistently produce interviews but not offers, explain that the resume is unlikely to be the primary bottleneck. Do not automatically rewrite it; offer a separate resume audit if the candidate still wants one and identify interview or later-stage conversion as the area to examine.
 - Distinguish fixable document problems from competition or relative-fit factors. A qualified candidate may lose to someone with closer industry, systems, location, or achievement evidence.

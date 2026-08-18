@@ -2,23 +2,26 @@
 
 # Recruiter-Ready CV
 
-Two agent skills for diagnosing career positioning and creating, repairing, or tailoring ATS-friendly resumes that persuade human recruiters.
+Three agent skills for diagnosing job-search visibility and career positioning, then creating, repairing, or tailoring ATS-friendly resumes that persuade human recruiters.
 
 [![Agent Skill](https://img.shields.io/badge/Agent_Skill-SKILL.md-6f42c1?style=flat-square)](https://agentskills.io/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](LICENSE)
 
-[Repository](https://github.com/pypi-ahmad/recruiter-ready-cv) · [Positioning audit](skills/audit-career-positioning/SKILL.md) · [CV skill](skills/recruiter-ready-cv/SKILL.md) · [Interview checklist](skills/recruiter-ready-cv/references/intake-questionnaire.md) · [LaTeX template](skills/recruiter-ready-cv/assets/ats-resume.tex)
+[Repository](https://github.com/pypi-ahmad/recruiter-ready-cv) · [Visibility audit](skills/audit-job-search-visibility/SKILL.md) · [Positioning audit](skills/audit-career-positioning/SKILL.md) · [CV skill](skills/recruiter-ready-cv/SKILL.md) · [Interview checklist](skills/recruiter-ready-cv/references/intake-questionnaire.md) · [LaTeX template](skills/recruiter-ready-cv/assets/ats-resume.tex)
 
 </div>
 
-The repository separates diagnosis from document creation. `audit-career-positioning` tests whether a candidate's target and evidence are clear; `recruiter-ready-cv` turns confirmed career information into a vacancy-aware resume.
+The repository separates diagnosis from document creation. `audit-job-search-visibility` finds the likely pre-interview bottleneck, `audit-career-positioning` tests whether the candidate's target and evidence are clear, and `recruiter-ready-cv` turns confirmed career information into a vacancy-aware resume.
 
 > [!IMPORTANT]
-> Neither skill invents employers, titles, dates, qualifications, responsibilities, metrics, or outcomes. They improve how verified evidence is presented; they cannot guarantee an interview.
+> The skills do not invent employers, titles, dates, qualifications, responsibilities, metrics, or outcomes. They improve how verified evidence is presented; they cannot guarantee an interview.
 
 ## Table of contents
 
 - [Available skills](#available-skills)
+- [What audit-job-search-visibility does](#what-audit-job-search-visibility-does)
+- [How the job-search visibility audit works](#how-the-job-search-visibility-audit-works)
+- [Job-search visibility inputs and privacy](#job-search-visibility-inputs-and-privacy)
 - [What audit-career-positioning does](#what-audit-career-positioning-does)
 - [How the career positioning audit works](#how-the-career-positioning-audit-works)
 - [Career positioning application funnel diagnosis](#career-positioning-application-funnel-diagnosis)
@@ -29,11 +32,14 @@ The repository separates diagnosis from document creation. `audit-career-positio
 - [Recruiter-ready CV application funnel diagnosis](#recruiter-ready-cv-application-funnel-diagnosis)
 - [Recruiter-ready CV inputs and privacy](#recruiter-ready-cv-inputs-and-privacy)
 - [Installation](#installation)
+  - [Install all skills](#install-all-skills)
+  - [Install audit-job-search-visibility](#install-audit-job-search-visibility)
   - [Install audit-career-positioning](#install-audit-career-positioning)
   - [Install recruiter-ready-cv](#install-recruiter-ready-cv)
   - [Shared installer options](#shared-installer-options)
   - [Install with gh](#install-with-gh)
 - [Usage examples](#usage-examples)
+- [Job-search visibility audit deliverables](#job-search-visibility-audit-deliverables)
 - [Career positioning audit deliverables](#career-positioning-audit-deliverables)
 - [Recruiter-ready CV deliverables](#recruiter-ready-cv-deliverables)
 - [ATS template and generated files](#ats-template-and-generated-files)
@@ -43,8 +49,46 @@ The repository separates diagnosis from document creation. `audit-career-positio
 
 | Skill | Use it for | Default result |
 | --- | --- | --- |
+| [`audit-job-search-visibility`](skills/audit-job-search-visibility/SKILL.md) | Diagnosing why repeated, genuinely suitable applications produce few or no interviews | Funnel verdict, suitability check, visibility scorecard, and bounded application experiment |
 | [`audit-career-positioning`](skills/audit-career-positioning/SKILL.md) | Testing whether a CV, supplied LinkedIn content, and vacancy evidence communicate one clear target | Career-clarity verdict, requirement-evidence map, and 30-minute action plan |
 | [`recruiter-ready-cv`](skills/recruiter-ready-cv/SKILL.md) | Creating, updating, auditing, or tailoring a verified resume | Structured content, LaTeX source, and PDF when available |
+
+## What audit-job-search-visibility does
+
+High application volume alone does not show whether a job seeker is visible to recruiters or genuinely matched to the roles. `audit-job-search-visibility` diagnoses the repeated failure stage before recommending more applications or a document rewrite.
+
+The skill:
+
+- Tests whether representative applications meet the vacancies' core requirements and constraints.
+- Distinguishes hidden value from weak targeting, genuine fit gaps, and later-stage interview problems.
+- Checks whether target, level, relevant experience, and likely value are obvious on the first scan.
+- Audits achievement evidence, natural vacancy terminology, presentation, and supplied CV/LinkedIn alignment.
+- Treats referrals as a visibility channel rather than a substitute for credible evidence.
+- Produces a bounded next-application experiment without promising interviews or blaming the market, recruiters, or ATS systems.
+
+## How the job-search visibility audit works
+
+1. **Establish the funnel pattern.** Review application count, time period, outcomes, and channels without treating volume as proof of suitability.
+2. **Test representative applications.** Classify the evidence as Suitable, Partly suitable, Mismatched, or Unknown against recurring requirements and constraints.
+3. **Run the first-scan test.** Determine whether the CV quickly communicates target, level, relevant experience, and value.
+4. **Audit visibility.** Check achievement evidence, keyword alignment, document presentation, and supplied LinkedIn consistency without inventing facts or using a fixed page rule.
+5. **Return diagnosis first.** Provide the funnel and visibility verdicts, priority findings, and a bounded experiment before offering a handoff.
+
+Use `audit-job-search-visibility` when the main question is why suitable applications are not generating interviews. Use `audit-career-positioning` when the primary issue is an unclear professional direction. Use `recruiter-ready-cv` only when the candidate wants a comprehensive document audit, creation workflow, or approved rewrite.
+
+## Job-search visibility inputs and privacy
+
+Useful inputs include:
+
+- Primary and adjacent target roles.
+- Application count, time period, channels, and funnel outcomes.
+- Three to five representative vacancies or recurring requirements.
+- The CV version used and examples of vacancy-specific changes.
+- Supplied LinkedIn headline, About section, and recent experience.
+- Relevant seniority, industry, systems, location, and work-authorization constraints.
+
+> [!NOTE]
+> The audit names missing evidence and unknown employer decisions. It does not claim access to a live profile, expose unnecessary contact details, assign a universal ATS score, or make unsupported market-specific conclusions.
 
 ## What audit-career-positioning does
 
@@ -173,6 +217,41 @@ The skill accepts career information or an existing resume in plain text, Markdo
 
 ## Installation
 
+### Install all skills
+
+Install every skill in this repository at once:
+
+```shell
+npx skills add https://github.com/pypi-ahmad/recruiter-ready-cv --all
+```
+
+### Install audit-job-search-visibility
+
+Install for the current project with the cross-agent installer:
+
+```shell
+npx skills add https://github.com/pypi-ahmad/recruiter-ready-cv --skill audit-job-search-visibility
+```
+
+Install globally for every detected agent:
+
+```shell
+npx skills add https://github.com/pypi-ahmad/recruiter-ready-cv --skill audit-job-search-visibility --agent '*' --global --yes
+```
+
+On Windows, use independent copies when filesystem links are unavailable:
+
+```powershell
+npx skills add https://github.com/pypi-ahmad/recruiter-ready-cv --skill audit-job-search-visibility --agent '*' --global --copy --yes
+```
+
+Preview and install for Codex with GitHub CLI:
+
+```shell
+gh skill preview pypi-ahmad/recruiter-ready-cv audit-job-search-visibility
+gh skill install pypi-ahmad/recruiter-ready-cv audit-job-search-visibility --agent codex --scope user
+```
+
 ### Install audit-career-positioning
 
 Install for the current project with the cross-agent installer:
@@ -231,6 +310,8 @@ gh skill install pypi-ahmad/recruiter-ready-cv recruiter-ready-cv --agent codex 
 
 The recommended installer requires Node.js 18 or later. It detects supported agents already installed on the machine and prompts for the destinations:
 
+Use `audit-job-search-visibility`, `audit-career-positioning`, or `recruiter-ready-cv` as the skill name in repository installation commands.
+
 | Option | Effect |
 | --- | --- |
 | `--global` | Makes the skill available across projects. Omit it to install for the current project. |
@@ -251,6 +332,8 @@ Review the skill before installing it:
 gh skill preview pypi-ahmad/recruiter-ready-cv <skill-name>
 ```
 
+Replace `<skill-name>` with `audit-job-search-visibility`, `audit-career-positioning`, or `recruiter-ready-cv`.
+
 GitHub's `gh` tool 2.90 or later can install the skill for a specific agent. Replace `<agent>` with an ID from the table:
 
 ```shell
@@ -268,6 +351,18 @@ gh skill install pypi-ahmad/recruiter-ready-cv <skill-name> --agent <agent> --sc
 To install for one repository instead, run the command from that repository and replace `--scope user` with `--scope project`.
 
 ## Usage examples
+
+Diagnose why suitable applications are not producing interviews:
+
+```text
+Use audit-job-search-visibility to review my application outcomes, representative vacancies, CV, and supplied LinkedIn content. Separate weak visibility from targeting or genuine fit gaps before recommending changes.
+```
+
+Test whether application volume hides a targeting problem:
+
+```text
+Use audit-job-search-visibility to compare these representative jobs with my verified experience, classify the application sample, and define a bounded next-application experiment without rewriting my CV yet.
+```
 
 Create a new resume:
 
@@ -317,6 +412,18 @@ Diagnose low interview conversion:
 Use audit-career-positioning to review my application outcomes, CV, and supplied LinkedIn content. Tell me whether unclear positioning appears to be the likely reason suitable applications are not producing interviews.
 ```
 
+## Job-search visibility audit deliverables
+
+The audit returns:
+
+1. A funnel verdict identifying the likely failure stage, confidence, evidence, and limits.
+2. A **Suitable**, **Partly suitable**, **Mismatched**, or **Unknown** classification for the reviewed application sample.
+3. A **Visible**, **Partly visible**, **Hidden**, or **Inconclusive** visibility verdict.
+4. A non-numeric scorecard covering target clarity, relevant experience, achievements, vacancy terminology, presentation, and CV/LinkedIn alignment.
+5. Prioritized findings and a bounded next-application experiment.
+
+The skill does not rewrite documents automatically. Approved target-clarity work transfers to `audit-career-positioning`; approved CV work transfers to `recruiter-ready-cv`.
+
 ## Career positioning audit deliverables
 
 The audit returns:
@@ -359,6 +466,10 @@ The bundled template uses a single-column, text-only layout with a centered iden
 ```text
 recruiter-ready-cv/
 └── skills/
+    ├── audit-job-search-visibility/
+    │   ├── SKILL.md
+    │   └── agents/
+    │       └── openai.yaml
     ├── audit-career-positioning/
     │   ├── SKILL.md
     │   └── agents/
@@ -373,4 +484,4 @@ recruiter-ready-cv/
             └── intake-questionnaire.md
 ```
 
-The workflows distill recruiter-screening principles from Zara Ali's [“Your CV Passed the ATS. The Recruiter Still Rejected It. Here's Why”](https://www.linkedin.com/pulse/your-cv-passed-ats-recruiter-still-rejected-heres-why-zara-ali-bgsdf/) and [“You're Applying for the Right Jobs So Why Are You Still Not Getting Interviews?”](https://www.linkedin.com/pulse/youre-applying-right-jobs-so-why-you-still-getting-interviews-ali-ruijf/).
+The workflows distill recruiter-screening principles from Zara Ali's [“Your CV Passed the ATS. The Recruiter Still Rejected It. Here's Why”](https://www.linkedin.com/pulse/your-cv-passed-ats-recruiter-still-rejected-heres-why-zara-ali-bgsdf/), [“You're Applying for the Right Jobs So Why Are You Still Not Getting Interviews?”](https://www.linkedin.com/pulse/youre-applying-right-jobs-so-why-you-still-getting-interviews-ali-ruijf/), and [“I've Applied to More Than 400 Jobs and Nobody Is Calling Me”](https://www.linkedin.com/pulse/ive-applied-more-than-400-jobs-nobody-calling-me-zara-ali-p4fuf/).

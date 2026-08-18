@@ -10,6 +10,8 @@ license: MIT
 
 Determine whether a recruiter can quickly identify the candidate's target, level, strongest relevant capabilities, and credible evidence. Diagnose positioning before recommending more applications, qualifications, or a document rewrite.
 
+If the main request is to diagnose why repeated, genuinely suitable applications produce few or no interviews across targeting, CV evidence, supplied LinkedIn content, keywords, presentation, or referral expectations, route first to `$audit-job-search-visibility`. Use this skill when professional direction and requirement-to-evidence clarity are the primary questions.
+
 ## Keep the Audit Separate from Rewriting
 
 Return diagnosis and an action plan first. Do not rewrite the CV, LinkedIn profile, or supporting documents unless the candidate explicitly agrees to continue.

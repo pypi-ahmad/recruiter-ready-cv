@@ -1,0 +1,4 @@
+interface:
+  display_name: "Job Search Visibility Audit"
+  short_description: "Diagnose why applications get no interviews"
+  default_prompt: "Use $audit-job-search-visibility to diagnose why my suitable applications are not producing interviews across my CV, LinkedIn, targeting, keywords, and evidence."
