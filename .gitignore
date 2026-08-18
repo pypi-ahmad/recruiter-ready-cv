@@ -1,3 +1,4 @@
-# Local CodeGraph state and generated Better Harness reports
+# Local agent state and generated analysis artifacts
 .codegraph/
-.codex/better-harness/
+.codex/
+.code-review-graph/
